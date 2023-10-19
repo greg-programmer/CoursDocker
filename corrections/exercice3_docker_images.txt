@@ -1,0 +1,5 @@
+docker commit <container name ou id> <nom image> // creer une image depuis un container
+
+docker login // s'identifier
+docker tag <mon image> <nom utilisateur>/<nom image>
+docker push <nom utilisateur>/<nom image>

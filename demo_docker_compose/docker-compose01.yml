@@ -1,0 +1,22 @@
+version : '3.7'
+
+services:
+    back:
+        image: backapi
+        container_name: api_contact_back_container
+        restart: always
+        ports:
+          - 7777:7777
+
+    
+    front:
+          image: frontapi
+          container_name: api_contact_front_container
+          restart: always
+          ports:
+            - 3000:3000
+          depends_on:
+            - back
+
+
+          

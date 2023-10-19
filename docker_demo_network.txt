@@ -1,0 +1,20 @@
+Demonstration network docker
+
+Créer un réseau / y placer 2 containers / faire communique ces container (ping) /
+les deconnecter du réseau / les reconnecter au reseau
+
+- docker network create --driver bridge mon-bridge
+- docker network ls
+- docker network inspect mon-bridge
+- docker run -dit --name alpine1 --network mon-bridge alpine
+- docker run -dit --name alpine2 --network mon-bridge alpine
+- docker network inspect mon-bridge
+- docker exec alpine1 ping alpine2
+- docker exec alpine2 ping alpine1
+- docker network disconnect mon-bridge alpine1
+- docker network disconnect mon-bridge alpine2
+- docker network connect mon-bridge alpine1
+- docker network connect mon-bridge alpine2
+- docker network disconnect mon-bridge alpine1
+- docker network disconnect mon-bridge alpine2
+- docker network rm mon-bridge

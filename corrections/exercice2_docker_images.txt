@@ -1,0 +1,22 @@
+Recherche images :
+- docker images
+- docker pull nginx
+
+conteneur a partir de cette image :
+- docker run -d --name exercice2 -p 5000:80 nginx
+
+verifier le serveur web : http://localhost:5000
+
+
+se connecter au conteneur :
+- docker exec -it exercice2 bash
+
+dans le terminale du conteneur :
+- apt update // mise a jour du gestionnaire de package
+- apt install git // installation de git
+
+se placer dans le repertoire de notre page web :
+- cd /usr/share/nginx/html
+- rm index.html // suppresion des fichiers deja present
+- rm 50x.html // suppresion des fichiers deja present
+- git clone https://github.com/ms-studio/html5up-dimension.git .

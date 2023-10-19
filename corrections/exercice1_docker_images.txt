@@ -1,0 +1,28 @@
+Recherche images :
+- docker images
+- docker pull nginx
+
+conteneur a partir de cette image :
+- docker run -d --name exercice1 -p 80:80 nginx
+
+verifier le serveur web : http://localhost/
+
+se connecter au conteneur :
+- docker exec -it exercice1 bash
+
+dans le terminale du conteneur :
+- apt update // mise a jour du gestionnaire de package
+- apt install nano // installation de nano pour editer la page web
+
+se placer dans le repertoire de notre page web :
+- cd /usr/share/nginx/html
+editer la page web :
+- nano index.html // edite ma page web et je sauvegarde
+
+je verifie les changement sur mon site web : http://localhost/
+
+quitter mon terminal :
+- exit
+
+stopper mon conteneur :
+- docker stop exercice1
